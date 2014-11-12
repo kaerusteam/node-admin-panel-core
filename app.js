@@ -1,3 +1,26 @@
-﻿var Server = require("./lib/server.js");
+﻿var package = require("./package.json"),
+	Server = require("./lib/server.js"),
+	commander = require("commander")
+	;
+
 var server = new Server();
-server.start();
+commander.version(package.version);
+
+
+commander.command("listen")
+	.description("inititalize app and listen port")
+	.action(function() {
+		server.listen();
+	});
+
+
+commander.command("install")
+	.description("install app in new environment")
+	.action(function() {
+		server.install();
+	});
+
+
+commander.parse(process.argv);
+
+
