@@ -1,0 +1,10 @@
+{
+	"name": "Roles",
+	"version": "0.1",
+	"main": "roles.js",
+	"exports": {
+		"getRoles": {
+			"needAuth": true
+		}
+	}
+}
