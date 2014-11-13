@@ -3,8 +3,22 @@
 	"version": "0.0.1",
 	"main": "roles.js",
 	"exports": {
-		"getRoles": {
-			"needAuth": true
-		}
+		"urlPrefix": "roles",
+		"methods": [
+			{
+				"name": "get",
+				"handler": "getRoles",
+				"options": {
+					"needAuth": true
+				}
+			},
+			{
+				"name": "set",
+				"handler": "setRoles",
+				"options": {
+					"needAuth": true
+				}
+			}
+		]
 	}
 }
