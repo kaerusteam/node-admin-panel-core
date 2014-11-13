@@ -20,7 +20,16 @@ commander.command("install")
 		server.install();
 	});
 
+commander.command("*")
+	.description("help")
+	.action(function() {
+		commander.help();
+	});
+
+if(process.argv.length === 2) {
+	commander.help();
+}
+
 
 commander.parse(process.argv);
-
 
