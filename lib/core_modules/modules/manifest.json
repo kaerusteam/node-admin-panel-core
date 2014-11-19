@@ -1,0 +1,24 @@
+{
+	"name": "Modules",
+	"version": "0.0.1",
+	"main": "modules.js",
+	"exports": {
+		"urlPrefix": "modules",
+		"methods": [
+			{
+				"name": "get",
+				"handler": "getModules",
+				"options": {
+					"needAuth": false
+				}
+			},
+			{
+				"name": "set",
+				"handler": "setRoles",
+				"options": {
+					"needAuth": true
+				}
+			}
+		]
+	}
+}
