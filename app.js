@@ -20,6 +20,21 @@ commander.command("install")
 		server.install();
 	});
 
+commander.command("module <name>")
+	.description("create new module with given name by template")
+	.option("-c, --core", "create module in system's core")
+	.option("-w, --web", "create module in web client")
+	.option("-d, --database [dbname]", "which db use in template. Default - mongodb")
+	.action(function(name, options){
+		server.createModule(name, options);
+	});
+
+commander.command("migration <name>")
+	.description("create new migration template for module with given name")
+	.action(function(name, options){
+		server.createMigration(name, options);
+	});
+
 commander.command("*")
 	.description("help")
 	.action(function() {
