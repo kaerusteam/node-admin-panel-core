@@ -1,0 +1,43 @@
+{
+	"name": "Registration",
+	"version": "0.0.1",
+	"main": "registration.js",
+	"exports": {
+		"urlPrefix": "registration",
+		"methods": [
+			{
+				"name": "register",
+				"handler": "register",
+				"options": {
+					"needAuth": false
+				}
+			},
+			{
+				"name": "registerSms",
+				"handler": "registerSms",
+				"options": {
+					"needAuth": false
+				}
+			}
+		],
+		"schema" : {
+			"register" : {
+				"type" : "object",
+				"properties" : {
+					"login" : {
+						"type" : "string",
+						"pattern" : "^[a-zA-Zа-яА-Я0-9]+$"
+					},
+					"password" : {
+						"type" : "string",
+						"pattern" :  "^[a-zA-Zа-яА-Я0-9]+$"
+					}
+				},
+				"required" : ["login", "password"]
+			},
+			"registerSms" : {
+
+			}
+		}
+	}
+}
