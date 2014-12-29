@@ -27,4 +27,4 @@ node_modules
 # Users Environment Variables
 .lock-wscript
 
-./lib/config/development.js
+/lib/config/development.js
